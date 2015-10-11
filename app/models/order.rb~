@@ -1,0 +1,4 @@
+class Order < ActiveRecord::Base
+ has_many :includes
+  has_many :product, through: :includes
+end

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+<div class="container">
+ 
+  <ul class="list-inline">
+    <li><a href="#" title="Header" data-toggle="popover" data-placement="top" data-
+    <li><a href="#" title="Header" data-toggle="popover" data-placement="bottom" 
+    <li><a href="#" title="Header" data-toggle="popover" data-placement="left" 
+    <li><a href="#" title="Header" data-toggle="popover" data-placement="right" 
+  </ul>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+</p>
+
+<p>
+  <strong>Email:</strong> 
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Addres:</strong>
+  <%= @customer.address %>
+</p>
+
+<p>
+  <strong>Contactno:</strong>
+  <%= @customer.contactno %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

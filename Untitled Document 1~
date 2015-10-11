@@ -1,0 +1,7 @@
+git init
+git add
+git commit_m" miniproject"
+git status
+
+
+git push _u origin master

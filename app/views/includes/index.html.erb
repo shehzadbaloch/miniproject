@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Includes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Order</th>
+      <th>Product</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @includes.each do |include| %>
+      <tr>
+        <td><%= include.quality %></td>
+        <td><%= include.order_id %></td>
+        <td><%= include.product_id %></td>
+        <td><%= link_to 'Show', include %></td>
+        <td><%= link_to 'Edit', edit_include_path(include) %></td>
+        <td><%= link_to 'Destroy', include, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Include', new_include_path %>

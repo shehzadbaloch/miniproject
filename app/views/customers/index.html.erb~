@@ -1,0 +1,36 @@
+<h1>Listing Customers</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Addres</th>
+      <th>Contactno</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody><br>
+ <% @customers.each do |customer| %>
+      <br><tr>
+        <td><%= customer.name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.addres %></td>
+        <td><%= customer.contactno %></td>
+        <td><%= link_to 'Show', customer %></td> 
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+
+<div class="container">
+    <div class="btn-group">
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-primary"></button>
+    <button type="button" class="btn btn-primary"></button>
+  </div>
+</div>
+
+  </tbody>
+</table>
+<%= link_to 'New Customer', new_customer_path, :class => "button" %>

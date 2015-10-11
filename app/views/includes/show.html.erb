@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @include.quality %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @include.order %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @include.product %>
+</p>
+
+<%= link_to 'Edit', edit_include_path(@include) %> |
+<%= link_to 'Back', includes_path %>
